@@ -129,6 +129,32 @@
       text-align: center;
     }
     
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .footer-contact {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #ffd32a;
+      margin: 0;
+    }
+    
+    .footer-contact a {
+      color: #ffd32a;
+      text-decoration: none;
+    }
+    
+    .copyright {
+      margin-top: 20px;
+      color: white;
+      font-size: 1rem;
+    }
+    
     body {
       margin: 0;
       padding: 0;
@@ -231,13 +257,15 @@
 
   <footer>
     <div class="container">
-      <p style="font-size: 1.2rem; font-weight: 500; color: #ffd32a; margin: 0;">
-        Developed by — <a href="mailto:tausifkhanak35@gmail.com" style="color: #ffd32a; text-decoration: none;">tausifkhanak35@gmail.com</a>
-      </p>
-      <p style="font-size: 1.2rem; font-weight: 500; color: #ffd32a; margin: 5px 0 0 0;">
-        Contact Number — +91 8431455238
-      </p>
-      <p style="margin-top: 15px; color: white;">
+      <div class="footer-content">
+        <p class="footer-contact">
+          Developed by — <a href="mailto:tausifkhanak35@gmail.com">tausifkhanak35@gmail.com</a>
+        </p>
+        <p class="footer-contact">
+          Contact Number — +91 8431455238
+        </p>
+      </div>
+      <p class="copyright">
         &copy; <span id="current-year">2024</span> AN-NAHDI EDUCATIONAL TRUST. All Rights Reserved.
       </p>
     </div>
