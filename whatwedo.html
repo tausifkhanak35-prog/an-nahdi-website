@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What We Do - AN-NAHDI EDUCATIONAL TRUST</title>
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Header Styles */
+    header {
+      background: #0a3d62;
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo-container a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+    }
+    
+    .logo-text {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: #ffd32a;
+    }
+    
+    /* Section Styles */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    
+    h1, h2 {
+      color: #0a3d62;
+      margin-bottom: 20px;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    h2 {
+      font-size: 2rem;
+    }
+    
+    p {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-size: 1rem;
+      color: #333;
+    }
+    
+    /* Programs Grid */
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .program-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    
+    .program-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .program-icon {
+      font-size: 3rem;
+      color: #0a3d62;
+      margin-bottom: 1rem;
+    }
+    
+    /* Background Styles */
+    .gradient-blue {
+      background: linear-gradient(135deg, #e8f0fe, #dbeafe);
+    }
+    
+    .light-blue {
+      background-color: #f0f8ff;
+    }
+    
+    .gradient-green {
+      background: linear-gradient(135deg, #e6f7f2, #ccf2e7);
+    }
+    
+    /* Footer Styles */
+    footer {
+      background: #0a3d62;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .footer-contact {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #ffd32a;
+      margin: 0;
+    }
+    
+    .footer-contact a {
+      color: #ffd32a;
+      text-decoration: none;
+    }
+    
+    .copyright {
+      margin-top: 20px;
+      color: white;
+      font-size: 1rem;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      padding-top: 80px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="logo.png" alt="AN-NAHDI Logo" style="height: 50px;">
+          <span class="logo-text">AN-NAHDI EDUCATIONAL TRUST</span>
+        </a>
+      </div>
+
+      <nav class="desktop-nav">
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="whatwedo.html" style="color: #ffd32a;">What We Do</a>
+          <a href="donate.html">Donate</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+          <a href="follow-us.html">Follow Us</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- What We Do Content -->
+  <section class="gradient-blue">
+    <h1>Our Educational Programs</h1>
+    <p>
+      At AN-NAHDI EDUCATIONAL TRUST, we implement comprehensive programs designed to address 
+      educational gaps and empower underprivileged children with knowledge, skills, and confidence 
+      for a brighter future.
+    </p>
+  </section>
+
+  <section class="light-blue">
+    <h2>Our Core Initiatives</h2>
+    <div class="programs-grid">
+      <div class="program-card">
+        <div class="program-icon">
+          <i class="fas fa-book-open"></i>
+        </div>
+        <h3>Free Quality Education</h3>
+        <p>Providing completely free education to children from economically disadvantaged backgrounds, covering all academic subjects with qualified teachers.</p>
+      </div>
+      
+      <div class="program-card">
+        <div class="program-icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3>Digital Literacy</h3>
+        <p>Teaching computer skills and digital literacy to prepare children for the modern world and future employment opportunities.</p>
+      </div>
+      
+      <div class="program-card">
+        <div class="program-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3>Character Building</h3>
+        <p>Focusing on moral education, ethical values, and personality development to create responsible citizens.</p>
+      </div>
+      
+      <div class="program-card">
+        <div class="program-icon">
+          <i class="fas fa-female"></i>
+        </div>
+        <h3>Girl Child Education</h3>
+        <p>Special focus on educating girls and breaking gender barriers in education within marginalized communities.</p>
+      </div>
+      
+      <div class="program-card">
+        <div class="program-icon">
+          <i class="fas fa-utensils"></i>
+        </div>
+        <h3>Nutrition Support</h3>
+        <p>Providing nutritious meals to ensure children can focus on learning without hunger distractions.</p>
+      </div>
+      
+      <div class="program-card">
+        <div class="program-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>Career Guidance</h3>
+        <p>Offering career counseling and guidance to help students make informed decisions about their future paths.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gradient-green">
+    <h2>Our Approach</h2>
+    <p>
+      We believe in holistic education that goes beyond textbooks. Our approach combines academic excellence 
+      with life skills, moral values, and practical knowledge. We work closely with communities to understand 
+      their specific needs and create sustainable educational solutions that create lasting impact.
+    </p>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-contact">
+          Developed by — <a href="mailto:tausifkhanak35@gmail.com">tausifkhanak35@gmail.com</a>
+        </p>
+        <p class="footer-contact">
+          Contact Number — +91 8431455238
+        </p>
+      </div>
+      <p class="copyright">
+        &copy; <span id="current-year">2024</span> AN-NAHDI EDUCATIONAL TRUST. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
