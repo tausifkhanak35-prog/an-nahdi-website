@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - AN-NAHDI EDUCATIONAL TRUST</title>
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Header Styles */
+    header {
+      background: #0a3d62;
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo-container a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+    }
+    
+    .logo-text {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: #ffd32a;
+    }
+    
+    /* Section Styles */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    
+    h1, h2 {
+      color: #0a3d62;
+      margin-bottom: 20px;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    h2 {
+      font-size: 2rem;
+    }
+    
+    p {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-size: 1rem;
+      color: #333;
+    }
+    
+    /* Contact Layout */
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 3rem;
+      text-align: left;
+    }
+    
+    .contact-info {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    /* Contact Items */
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+    
+    .contact-icon {
+      background: #0a3d62;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+    
+    .contact-details h3 {
+      margin: 0 0 0.5rem 0;
+      color: #0a3d62;
+    }
+    
+    .contact-details p {
+      margin: 0;
+      text-align: left;
+    }
+    
+    /* Form Styles */
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #0a3d62;
+      font-weight: 500;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+      box-sizing: border-box;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #0a3d62;
+    }
+    
+    .submit-btn {
+      background: #0a3d62;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: 100%;
+    }
+    
+    .submit-btn:hover {
+      background: #ffd32a;
+      color: #0a3d62;
+    }
+    
+    /* Map Section */
+    .map-container {
+      margin-top: 3rem;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    /* Background Styles */
+    .gradient-blue {
+      background: linear-gradient(135deg, #e8f0fe, #dbeafe);
+    }
+    
+    .light-blue {
+      background-color: #f0f8ff;
+    }
+    
+    /* Footer Styles */
+    footer {
+      background: #0a3d62;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .footer-contact {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #ffd32a;
+      margin: 0;
+    }
+    
+    .footer-contact a {
+      color: #ffd32a;
+      text-decoration: none;
+    }
+    
+    .copyright {
+      margin-top: 20px;
+      color: white;
+      font-size: 1rem;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      padding-top: 80px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="logo.png" alt="AN-NAHDI Logo" style="height: 50px;">
+          <span class="logo-text">AN-NAHDI EDUCATIONAL TRUST</span>
+        </a>
+      </div>
+
+      <nav class="desktop-nav">
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="whatwedo.html">What We Do</a>
+          <a href="donate.html">Donate</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html" style="color: #ffd32a;">Contact</a>
+          <a href="follow-us.html">Follow Us</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Content -->
+  <section class="gradient-blue">
+    <h1>Get In Touch</h1>
+    <p>
+      We'd love to hear from you! Whether you have questions about our programs, want to volunteer, 
+      or need more information, feel free to reach out to us.
+    </p>
+  </section>
+
+  <section class="light-blue">
+    <h2>Contact Information</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Our Address</h3>
+            <p>
+              AN-NAHDI EDUCATIONAL TRUST<br>
+              [Your Street Address]<br>
+              [Your City, State - PIN Code]<br>
+              India
+            </p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Phone Number</h3>
+            <p>+91 8431455238</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Email Address</h3>
+            <p>tausifkhanak35@gmail.com</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Office Hours</h3>
+            <p>
+              Monday - Friday: 9:00 AM - 5:00 PM<br>
+              Saturday: 10:00 AM - 2:00 PM<br>
+              Sunday: Closed
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="map-container">
+      <!-- You can add Google Maps embed code here later -->
+      <div style="background: #e0e0e0; height: 300px; display: flex; align-items: center; justify-content: center;">
+        <p style="color: #666; font-style: italic;">Map location will be added here</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-contact">
+          Developed by — <a href="mailto:tausifkhanak35@gmail.com">tausifkhanak35@gmail.com</a>
+        </p>
+        <p class="footer-contact">
+          Contact Number — +91 8431455238
+        </p>
+      </div>
+      <p class="copyright">
+        &copy; <span id="current-year">2024</span> AN-NAHDI EDUCATIONAL TRUST. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Simple form submission handler (for demonstration)
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message! We will get back to you soon.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
