@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate - AN-NAHDI EDUCATIONAL TRUST</title>
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Header Styles */
+    header {
+      background: #0a3d62;
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo-container a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+    }
+    
+    .logo-text {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: #ffd32a;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+      padding: 120px 20px 80px 20px;
+      text-align: center;
+      color: white;
+      background: url('home.jpeg') no-repeat center center/cover;
+      position: relative;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.4);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+    
+    .hero-content p {
+      max-width: 750px;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: white;
+    }
+    
+    /* Section Styles */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    
+    h2 {
+      color: #0a3d62;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+    
+    p {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-size: 1rem;
+      color: #333;
+    }
+    
+    /* Donation Options */
+    .donation-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    
+    .donation-card {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      width: 250px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    
+    .donation-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .donation-card h3 {
+      color: #0a3d62;
+      margin-bottom: 15px;
+    }
+    
+    /* Bank Details */
+    .bank-details {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 2rem auto;
+      text-align: left;
+    }
+    
+    .bank-details h3 {
+      color: #0a3d62;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .bank-info {
+      margin-bottom: 1rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .bank-info:last-child {
+      border-bottom: none;
+    }
+    
+    .bank-info strong {
+      color: #0a3d62;
+      display: inline-block;
+      width: 150px;
+    }
+    
+    /* QR Code Section */
+    .qr-section {
+      margin-top: 40px;
+    }
+    
+    .qr-code {
+      width: 200px;
+      height: 200px;
+      border: 2px solid #0a3d62;
+      border-radius: 12px;
+      margin: 1rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f9fa;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .qr-placeholder {
+      color: #666;
+      font-style: italic;
+    }
+    
+    /* Button Styles */
+    .donate-button {
+      display: inline-block;
+      margin-top: 25px;
+      background-color: #ffd32a;
+      color: #0a3d62;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    
+    .donate-button:hover {
+      background-color: #0a3d62;
+      color: white;
+    }
+    
+    /* List Styles */
+    ul {
+      max-width: 750px;
+      margin: auto;
+      text-align: left;
+      line-height: 1.7;
+      font-size: 1rem;
+      color: #333;
+    }
+    
+    li {
+      margin-bottom: 10px;
+    }
+    
+    /* Background Styles */
+    .bg-light-blue {
+      background-color: #f0f8ff;
+    }
+    
+    .bg-gradient-green {
+      background: linear-gradient(135deg, #e6f7f2, #ccf2e7);
+    }
+    
+    /* Footer Styles */
+    footer {
+      background: #0a3d62;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .footer-contact {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #ffd32a;
+      margin: 0;
+    }
+    
+    .footer-contact a {
+      color: #ffd32a;
+      text-decoration: none;
+    }
+    
+    .copyright {
+      margin-top: 20px;
+      color: white;
+      font-size: 1rem;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="logo.png" alt="AN-NAHDI Logo" style="height: 50px;">
+          <span class="logo-text">AN-NAHDI EDUCATIONAL TRUST</span>
+        </a>
+      </div>
+
+      <nav class="desktop-nav">
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="whatwedo.html">What We Do</a>
+          <a href="donate.html" style="color: #ffd32a;">Donate</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+          <a href="follow-us.html">Follow Us</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Donate Page Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Invest in a Child's Future. Donate Today.</h1>
+      <p>
+        Your generous contribution directly funds school operations, learning resources, nutritious meals, and teacher salaries.
+        Every rupee brings us closer to an educated India.
+      </p>
+    </div>
+  </section>
+
+  <!-- How Your Donation Helps Section -->
+  <section class="bg-light-blue">
+    <h2>How Your Donation Helps</h2>
+    <div class="donation-grid">
+      <div class="donation-card">
+        <h3>₹500</h3>
+        <p>Provides books and stationery for 1 child for a month.</p>
+      </div>
+      <div class="donation-card">
+        <h3>₹1,000</h3>
+        <p>Funds a nutritious mid-day meal for 1 child for a month.</p>
+      </div>
+      <div class="donation-card">
+        <h3>₹2,500</h3>
+        <p>Supports digital literacy training for 5 children.</p>
+      </div>
+      <div class="donation-card">
+        <h3>₹5,000</h3>
+        <p>Contributes to a teacher's salary for 1 month.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ways to Donate Section with QR Code -->
+  <section class="bg-gradient-green">
+    <h2>Ways to Donate</h2>
+    <p>
+      One-Time Donation: Make a single, impactful contribution.<br>
+      Monthly Giving: Become a sustaining donor and provide consistent support.
+    </p>
+    <a href="#" class="donate-button">Donate Now</a>
+
+    <!-- QR Code Image -->
+    <div class="qr-section">
+      <div class="qr-code">
+        <p class="qr-placeholder">QR Code Image</p>
+      </div>
+      <p style="margin-top: 15px; color: #0a3d62; font-size: 0.95rem;">
+        Scan to Donate - Upload your QR code image and name it "qr-code.jpg"
+      </p>
+    </div>
+
+    <!-- Bank Details -->
+    <div class="bank-details">
+      <h3>Bank Transfer Details</h3>
+      <div class="bank-info">
+        <strong>Account Name:</strong> AN-NAHDI EDUCATIONAL TRUST
+      </div>
+      <div class="bank-info">
+        <strong>Account Number:</strong> 120036997902
+      </div>
+      <div class="bank-info">
+        <strong>Bank Name:</strong> Canara Bank
+      </div>
+      <div class="bank-info">
+        <strong>IFSC Code:</strong> CNRB0001614
+      </div>
+      <div class="bank-info">
+        <strong>Branch:</strong> Nanjumalige Branch Mysore
+      </div>
+      <p style="text-align: center; margin-top: 1rem; font-style: italic;">
+        After transferring, please email us at annahdieducationaltrust@gmail.com with your details for receipt.
+      </p>
+    </div>
+  </section>
+
+  <!-- Other Ways to Support Section -->
+  <section class="bg-light-blue">
+    <h2>Other Ways to Support</h2>
+    <ul>
+      <li>Volunteer: Lend your time and skills to teach or mentor.</li>
+      <li>Corporate Partnerships: Align your CSR initiatives with our cause.</li>
+      <li>Spread the Word: Share our mission with your network.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-contact">
+          Email — <a href="mailto:annahdieducationaltrust@gmail.com">annahdieducationaltrust@gmail.com</a>
+        </p>
+        <p class="footer-contact">
+          Contact Number — +91 8431455238
+        </p>
+      </div>
+      <p class="copyright">
+        &copy; <span id="current-year">2024</span> AN-NAHDI EDUCATIONAL TRUST. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
