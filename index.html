@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AN-NAHDI | Empowering Futures Through Education</title>
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo-container">
+        <a href="index.html">
+          <!-- Add your logo image later -->
+          <span class="logo-text">AN-NAHDI EDUCATIONAL TRUST</span>
+        </a>
+      </div>
+
+      <nav class="desktop-nav">
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="whatwedo.html">What We Do</a>
+          <a href="donate.html">Donate</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+          <a href="follow-us.html">Follow Us</a>
+        </div>
+      </nav>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <button class="close-btn" id="closeBtn">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="whatwedo.html">What We Do</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="follow-us.html">Follow Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Empowering Futures Through Education</h1>
+      <p>Breaking the cycle of poverty by providing free, high-quality education to underprivileged children in India. Every child deserves a chance to learn, grow, and dream.</p>
+      <div class="hero-buttons">
+        <a href="donate.html">Donate Now</a>
+        <a href="about.html">About Us</a>
+        <a href="volunteer.html">Volunteer With Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="section section-white">
+    <div class="container">
+      <p>At Empowering Futures, we believe that a child's potential should never be limited by their socio-economic background. We are committed to bridging the educational gap in India by building a foundation of learning, creativity, and hope for children from marginalized communities.</p>
+    </div>
+  </section>
+
+  <!-- Key Impact Stats -->
+  <section class="section section-gray">
+    <div class="container">
+      <h2 style="color: #121639; font-size: 2rem; margin-bottom: 40px;">Our Impact</h2>
+      <div class="stats-container">
+        <div class="stat-card">
+          <h3>75%</h3>
+          <p>Families in our communities live below the poverty line.</p>
+        </div>
+        <div class="stat-card">
+          <h3>60%</h3>
+          <p>Children in surveyed areas are out of school.</p>
+        </div>
+        <div class="stat-card">
+          <h3>85%</h3>
+          <p>Families express a strong desire for quality education.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="section section-blue">
+    <div class="container">
+      <h2 style="font-size: 2rem; margin-bottom: 20px;">Your Support Can Change a Life</h2>
+      <p style="max-width: 700px; margin: auto; font-size: 1rem; line-height: 1.6;">
+        Contribute, volunteer, or spread awareness and be part of the Empowering Futures mission.
+      </p>
+      <div class="hero-buttons" style="margin-top: 25px;">
+        <a href="donate.html">Donate Today</a>
+        <a href="about.html">About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p style="font-size: 1.2rem; font-weight: 500; color: #ffd32a; margin: 0;">
+        Developed by — <a href="mailto:tausifkhanak35@gmail.com" style="color: #ffd32a; text-decoration: none;">tausifkhanak35@gmail.com</a>
+      </p>
+      <p style="font-size: 1.2rem; font-weight: 500; color: #ffd32a; margin: 5px 0 0 0;">
+        Contact Number — +91 8431455238
+      </p>
+      <p style="margin-top: 15px; color: white;">
+        &copy; <span id="current-year">2024</span> AN-NAHDI EDUCATIONAL TRUST. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileLinks = mobileNav.querySelectorAll('a');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileNav.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      mobileNav.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      });
+    });
+
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
